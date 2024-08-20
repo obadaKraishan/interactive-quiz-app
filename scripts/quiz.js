@@ -24,6 +24,24 @@ if (quizType === 'general-knowledge') {
 } else if (quizType === 'history') {
     quizTitle.textContent = "History Quiz";
     selectedQuiz = historyQuiz;
+} else if (quizType === 'geography') {
+    quizTitle.textContent = "Geography Quiz";
+    selectedQuiz = geographyQuiz;
+} else if (quizType === 'math') {
+    quizTitle.textContent = "Math Quiz";
+    selectedQuiz = mathQuiz;
+} else if (quizType === 'literature') {
+    quizTitle.textContent = "Literature Quiz";
+    selectedQuiz = literatureQuiz;
+} else if (quizType === 'technology') {
+    quizTitle.textContent = "Technology Quiz";
+    selectedQuiz = technologyQuiz;
+} else if (quizType === 'sports') {
+    quizTitle.textContent = "Sports Quiz";
+    selectedQuiz = sportsQuiz;
+} else if (quizType === 'music') {
+    quizTitle.textContent = "Music Quiz";
+    selectedQuiz = musicQuiz;
 } else {
     quizTitle.textContent = "Quiz Not Found";
 }
