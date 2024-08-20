@@ -9,9 +9,15 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex items-center justify-center">
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1 class="text-2xl font-bold" id="quiz-title">Quiz</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex items-center justify-center">
         <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
-            <h1 id="quiz-title" class="text-2xl font-bold mb-6 text-center"></h1>
             <div id="quiz-container" class="mb-4">
                 <h2 id="question" class="text-xl font-semibold mb-4"></h2>
                 <div id="answers" class="grid gap-4">
@@ -21,8 +27,14 @@
             <div id="feedback" class="text-center text-lg mb-4"></div>
             <button id="next-button" class="hidden bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Next Question</button>
             <button id="restart-button" class="hidden bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 mt-4">Restart Quiz</button>
+            <button id="home-button" class="hidden bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700 mt-4">Back to Home</button>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-4 text-center">
+        <p>&copy; 2024 Interactive Quiz App. All rights reserved.</p>
+    </footer>
 
     <!-- Include the quiz data files -->
     <script src="scripts/data/general-knowledge.js"></script>

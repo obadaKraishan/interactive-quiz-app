@@ -7,6 +7,7 @@ const answersElement = document.getElementById('answers');
 const feedbackElement = document.getElementById('feedback');
 const nextButton = document.getElementById('next-button');
 const restartButton = document.getElementById('restart-button');
+const homeButton = document.getElementById('home-button');
 const quizTitle = document.getElementById('quiz-title');
 
 // Determine which quiz to load based on URL parameter
@@ -61,6 +62,7 @@ function checkAnswer(answer) {
         nextButton.classList.remove('hidden');
     } else {
         restartButton.classList.remove('hidden');
+        homeButton.classList.remove('hidden');
         feedbackElement.textContent += ` Your final score is ${score}/${selectedQuiz.length}.`;
     }
 }
@@ -75,6 +77,11 @@ restartButton.addEventListener('click', () => {
     score = 0;
     loadQuestion();
     restartButton.classList.add('hidden');
+    homeButton.classList.add('hidden');
+});
+
+homeButton.addEventListener('click', () => {
+    window.location.href = "index.html";
 });
 
 function initQuiz() {

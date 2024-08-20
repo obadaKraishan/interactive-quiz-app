@@ -9,22 +9,35 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex flex-col items-center justify-center">
-        <h1 class="text-3xl font-bold mb-8">Choose a Quiz</h1>
+
+    <!-- Header -->
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1 class="text-2xl font-bold">Welcome to the Interactive Quiz App</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex flex-col items-center justify-center">
+        <h2 class="text-3xl font-bold mb-8">Choose a Quiz</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="quiz.html?quiz=general-knowledge" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
-                <h2 class="text-xl font-bold mb-4">General Knowledge</h2>
+                <h3 class="text-xl font-bold mb-4">General Knowledge</h3>
                 <p>Test your general knowledge with a variety of questions.</p>
             </a>
             <a href="quiz.html?quiz=science" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
-                <h2 class="text-xl font-bold mb-4">Science</h2>
+                <h3 class="text-xl font-bold mb-4">Science</h3>
                 <p>Challenge yourself with science-related questions.</p>
             </a>
             <a href="quiz.html?quiz=history" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
-                <h2 class="text-xl font-bold mb-4">History</h2>
+                <h3 class="text-xl font-bold mb-4">History</h3>
                 <p>How well do you know your history? Find out!</p>
             </a>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white p-4 text-center">
+        <p>&copy; 2024 Interactive Quiz App. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
