@@ -27,6 +27,9 @@
     <!-- Main Content -->
     <main class="min-h-screen flex items-center justify-center p-4">
         <div class="bg-white p-8 rounded shadow-lg w-full max-w-md text-center">
+            <!-- Timer Display -->
+            <div id="timer" class="text-red-500 text-lg font-bold mb-4">Time Left: <span id="time-left">30</span>s</div>
+
             <!-- Progress Indicator -->
             <div id="progress" class="text-sm mb-4">
                 Question <span id="current-question-number">1</span> of <span id="total-questions">5</span>
@@ -46,6 +49,7 @@
                 Quiz</button>
             <button id="home-button" class="hidden bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700 mt-4 w-full">Back
                 to Home</button>
+            <button id="share-button" class="hidden bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mt-4 w-full">Share Your Score</button>
         </div>
     </main>
 
