@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +9,22 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
-            <h1 class="text-2xl font-bold mb-6 text-center">Interactive Quiz</h1>
-            <div id="quiz-container" class="mb-4">
-                <h2 id="question" class="text-xl font-semibold mb-4"></h2>
-                <div id="answers" class="grid gap-4">
-                    <!-- Answer buttons will be generated dynamically -->
-                </div>
-            </div>
-            <div id="feedback" class="text-center text-lg mb-4"></div>
-            <button id="next-button" class="hidden bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Next Question</button>
-            <button id="restart-button" class="hidden bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 mt-4">Restart Quiz</button>
+    <div class="min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-3xl font-bold mb-8">Choose a Quiz</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a href="quiz.html?quiz=general-knowledge" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
+                <h2 class="text-xl font-bold mb-4">General Knowledge</h2>
+                <p>Test your general knowledge with a variety of questions.</p>
+            </a>
+            <a href="quiz.html?quiz=science" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
+                <h2 class="text-xl font-bold mb-4">Science</h2>
+                <p>Challenge yourself with science-related questions.</p>
+            </a>
+            <a href="quiz.html?quiz=history" class="bg-white p-6 rounded shadow-lg text-center hover:bg-gray-200">
+                <h2 class="text-xl font-bold mb-4">History</h2>
+                <p>How well do you know your history? Find out!</p>
+            </a>
         </div>
     </div>
-
-    <script src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!-- quiz.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded shadow-lg w-full max-w-md">
+            <h1 id="quiz-title" class="text-2xl font-bold mb-6 text-center"></h1>
+            <div id="quiz-container" class="mb-4">
+                <h2 id="question" class="text-xl font-semibold mb-4"></h2>
+                <div id="answers" class="grid gap-4">
+                    <!-- Answer buttons will be generated dynamically -->
+                </div>
+            </div>
+            <div id="feedback" class="text-center text-lg mb-4"></div>
+            <button id="next-button" class="hidden bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Next Question</button>
+            <button id="restart-button" class="hidden bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 mt-4">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="scripts/quiz.js"></script>
+</body>
+</html>
