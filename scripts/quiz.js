@@ -22,6 +22,9 @@ const correctSound = new Audio('sounds/correct.mp3');
 const incorrectSound = new Audio('sounds/wrong.mp3');
 const timerSound = new Audio('sounds/timer.mp3');
 
+// Set the timer sound to loop
+timerSound.loop = true;
+
 const queryParams = new URLSearchParams(window.location.search);
 const quizType = queryParams.get('quiz');
 
@@ -63,11 +66,13 @@ totalQuestionsElement.textContent = selectedQuiz.length;
 function startTimer() {
     timeLeft = 30;
     timeLeftElement.textContent = timeLeft;
+    timerSound.play(); // Start playing the timer sound
     timerInterval = setInterval(() => {
         timeLeft--;
         timeLeftElement.textContent = timeLeft;
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
+            timerSound.pause(); // Stop the timer sound
             feedbackElement.textContent = `Time's up! The correct answer was ${selectedQuiz[currentQuestionIndex].correct}.`;
             feedbackElement.classList.add('text-red-500');
             incorrectSound.play();
@@ -86,6 +91,7 @@ function startTimer() {
 
 function loadQuestion() {
     clearInterval(timerInterval);
+    timerSound.pause(); // Stop the timer sound if it's still playing
     startTimer();
     feedbackElement.textContent = '';
     const currentQuestion = selectedQuiz[currentQuestionIndex];
@@ -107,6 +113,7 @@ function loadQuestion() {
 
 function checkAnswer(answer) {
     clearInterval(timerInterval);
+    timerSound.pause(); // Stop the timer sound
     const currentQuestion = selectedQuiz[currentQuestionIndex];
     if (answer === currentQuestion.correct) {
         score++;

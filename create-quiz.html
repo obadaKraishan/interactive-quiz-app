@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Your Quiz</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
     <header class="bg-blue-600 text-white p-4 text-center">
-        <a href="index.html" class="text-white hover:text-gray-200">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 19l-7-7 7-7"></path>
-            </svg>
-        </a>
         <h1 class="text-2xl font-bold">Create Your Quiz</h1>
-        <span></span>
     </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 text-white p-4">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="index.html" class="hover:underline">Home</a></li>
+            <li><a href="leaderboard.html" class="hover:underline">Leaderboard</a></li>
+            <li><a href="create-quiz.html" class="hover:underline">Create Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main class="min-h-screen flex items-center justify-center">
         <form id="quiz-form" class="bg-white p-8 rounded shadow-lg w-full max-w-md">
             <div class="mb-4">
@@ -28,6 +33,8 @@
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">Save Quiz</button>
         </form>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-blue-600 text-white p-4 text-center">
         <p>&copy; 2024 Interactive Quiz App. All rights reserved.</p>
     </footer>
