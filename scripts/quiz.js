@@ -9,6 +9,9 @@ const nextButton = document.getElementById('next-button');
 const restartButton = document.getElementById('restart-button');
 const homeButton = document.getElementById('home-button');
 const quizTitle = document.getElementById('quiz-title');
+const progressElement = document.getElementById('progress');
+const currentQuestionNumberElement = document.getElementById('current-question-number');
+const totalQuestionsElement = document.getElementById('total-questions');
 
 // Determine which quiz to load based on URL parameter
 const queryParams = new URLSearchParams(window.location.search);
@@ -46,12 +49,18 @@ if (quizType === 'general-knowledge') {
     quizTitle.textContent = "Quiz Not Found";
 }
 
+// Update total questions in progress indicator
+totalQuestionsElement.textContent = selectedQuiz.length;
+
 function loadQuestion() {
     feedbackElement.textContent = '';
     const currentQuestion = selectedQuiz[currentQuestionIndex];
     questionElement.textContent = currentQuestion.question;
     answersElement.innerHTML = '';
-    
+
+    // Update progress indicator
+    currentQuestionNumberElement.textContent = currentQuestionIndex + 1;
+
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
         button.classList.add('bg-gray-200', 'text-gray-900', 'px-4', 'py-2', 'rounded', 'hover:bg-gray-300', 'w-full');
@@ -59,7 +68,7 @@ function loadQuestion() {
         button.addEventListener('click', () => checkAnswer(answer));
         answersElement.appendChild(button);
     });
-    
+
     nextButton.classList.add('hidden');
 }
 
@@ -75,7 +84,7 @@ function checkAnswer(answer) {
         feedbackElement.classList.remove('text-green-500');
         feedbackElement.classList.add('text-red-500');
     }
-    
+
     if (currentQuestionIndex < selectedQuiz.length - 1) {
         nextButton.classList.remove('hidden');
     } else {
